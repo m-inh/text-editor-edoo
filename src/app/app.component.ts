@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `<simple-tiny
+    [elementId]="'my-editor-id'"
+    (onEditorKeyup)="keyupHandlerFunction($event)">
+    </simple-tiny>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'app works!';
+
+  
 }
